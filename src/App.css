@@ -1,0 +1,491 @@
+/* Ensure the whole page takes full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* App container setup for sticky footer */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Ensures the footer is pushed to the bottom */
+.App > .footer {
+  margin-top: auto;
+}
+
+/* General styling for all sections */
+.section {
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+/* Books on Sale section styling */
+.books-on-sale {
+  background-color: #f9e7e7; /* Light red background */
+}
+
+/* Best Selling section styling */
+.best-sellers {
+  background-color: #e7f9e7; /* Light green background */
+}
+
+/* All Books section styling */
+.all-books {
+  background-color: #e7eaf9; /* Light blue background */
+}
+
+/* Common book card styling */
+.sale-book-card,
+.best-seller-book-card,
+.product-card {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sale-book-card h5,
+.best-seller-book-card h5,
+.product-card h5 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.sale-book-card p,
+.best-seller-book-card p,
+.product-card p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Button Styling */
+button {
+  margin-top: 10px;
+}
+
+/* Book card structure */
+.book-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.book-image-container {
+  height: 50%;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.book-details {
+  flex-grow: 1;
+}
+
+.book-details h5 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-details p {
+  margin-bottom: 0.75rem;
+}
+
+.book-card button {
+  margin-top: auto;
+}
+
+/* Responsive layout for book cards */
+@media (min-width: 768px) {
+  .col-md-4, .col-md-3 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%; /* Three cards in a row on medium and larger screens */
+  }
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #3333337d;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  margin: 0 15px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 14px;
+}
+
+/* Sticky footer logic for page with minimal content */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+
+/* Single Book Container */
+.single-book-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background-color: #f5f5f5;
+}
+
+/* Book Details Wrapper */
+.book-details-wrapper {
+  display: flex;
+  gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Book Image Section */
+.book-image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Book Details Section */
+.book-details-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.book-details-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.book-details-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.book-details-section strong {
+  color: #333;
+}
+
+/* Quantity Section */
+.quantity-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.quantity-section label {
+  font-weight: bold;
+}
+
+/* Button Group Styling */
+.button-group {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.button-group .btn {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+}
+
+/* Add Review Button */
+.add-review-btn {
+  margin-top: 15px;
+  background-color: #17a2b8;
+  color: white;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.add-review-btn:hover {
+  background-color: #138f99;
+}
+
+/* Review Form */
+.review-form {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-form h3 {
+  margin-bottom: 15px;
+}
+
+.review-form label {
+  font-weight: bold;
+}
+
+.review-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Reviews Section */
+.reviews-section {
+  margin-top: 40px;
+}
+
+.review {
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.review h5 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.review p {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.review p:last-child {
+  color: #ff9800;
+}
+
+
+
+.about-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content h1, .about-content h2 {
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+
+.privacy-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.privacy-content h1, .privacy-content h2 {
+  margin-bottom: 20px;
+}
+
+.privacy-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.privacy-content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.shipping-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shipping-content h1, .shipping-content h2 {
+  margin-bottom: 20px;
+}
+
+.shipping-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.shipping-content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.checkout-left {
+  width: 45%;
+}
+
+.checkout-right {
+  width: 45%;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.cart-item-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+/*customer table*/
+.customer-table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+.customer-table table {
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.customer-table th, .customer-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.customer-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.customer-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+
+/* checkout */
+.checkout-left {
+  padding: 20px; /* Add padding inside the div for space */
+  background-color: #ffffff; /* Ensure a white background for clarity */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 20px; /* Space between checkout left and right sections */
+}
+
+.checkout-left h3 {
+  font-size: 24px; /* Adjust font size for headings */
+  margin-bottom: 15px; /* Space below the heading */
+  color: #333; /* Darker color for better readability */
+}
+
+.checkout-left .address-container {
+  border: 1px solid #ddd; /* Light border around address sections */
+  border-radius: 6px; /* Slightly rounded corners */
+  padding: 15px; /* Padding inside address sections */
+  margin-bottom: 15px; /* Space between address sections */
+  background-color: #f9f9f9; /* Light grey background for address sections */
+}
+
+.checkout-left .address-container h4 {
+  font-size: 18px; /* Slightly smaller font size for subheadings */
+  margin-bottom: 10px; /* Space below subheading */
+}
+
+.checkout-left .address-container p {
+  margin: 5px 0; /* Uniform margin for address paragraphs */
+  color: #555; /* Softer color for address text */
+}
+
+.checkout-left .btn {
+  width: 100%; /* Full-width buttons for consistency */
+  margin-top: 10px; /* Space above buttons */
+}
+
+/* Adjust the overall form elements for better alignment */
+.checkout-left .form-control {
+  margin-bottom: 15px; /* Space between form fields */
+}
